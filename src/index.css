@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root {
+  background-color: #151515;
+}
+
+
+/* Scroll */
+
+::-webkit-scrollbar-button {
+  background-image: url('');
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 0px
+}
+
+::-webkit-scrollbar-track {
+  background-color: #151515;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #212529;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+::-webkit-resizer {
+  background-image: url('');
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 0px
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
