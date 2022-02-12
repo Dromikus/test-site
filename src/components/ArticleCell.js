@@ -1,12 +1,11 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import logo from '../image/img_1.jpg';
 
 export default function ArticleCell() {
     return (
         <>
             <Card className="my-2" bg='dark' text='light'>
-                <Card.Img variant="top" src={logo} />
+                <Card.Img variant="top" src='https://telegra.ph/file/e57118283e829a98c95bd.png' />
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
                     <Card.Text>

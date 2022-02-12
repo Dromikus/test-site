@@ -1,33 +1,27 @@
 import React from "react";
-import { Nav, Navbar, NavLink, Button, Container, ButtonGroup } from "react-bootstrap";
+import { Nav, Navbar, NavLink, Container} from "react-bootstrap";
 import { Link } from 'react-router-dom'
+import '../style/ComponentStyle.css';
 
 export default function Navibar() {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar fixed="top" collapseOnSelect expand="lg">
                 <Container>
-                    <Navbar.Brand href="/">Survival book</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
-                            <NavLink><Link className="link-light" to='/'>Home</Link></NavLink>
-                            <NavLink><Link className="link-light" to='/users'>Users</Link></NavLink>
-                            <NavLink><Link className="link-light" to='/about'>About</Link></NavLink>
-                        </Nav>
+                    <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end"> 
                         <Nav>
-                            <ButtonGroup aria-label="Basic example" className="my-2">
-                                <Button variant="light" onClick={handleClick}>Log in</Button>
-                                <Button variant="light">Sign out</Button>
-                            </ButtonGroup>
+                            <NavLink><Link className="link-dark myLink" to='/'>Главная</Link></NavLink>
+                            <NavLink><Link className="link-dark" style={{ textDecoration: 'none' }} to='/'>Энциклопедия</Link></NavLink>
+                            <NavLink><Link className="link-dark" style={{ textDecoration: 'none' }} to='/'>Публикации</Link></NavLink>
+                            <NavLink><Link className="link-dark" style={{ textDecoration: 'none' }} to='/'>Форум</Link></NavLink>
+                            <NavLink><Link className="link-dark" style={{ textDecoration: 'none' }} to='/users'>Профиль</Link></NavLink>
+                            <NavLink><Link className="link-dark" style={{ textDecoration: 'none' }} to='/about'>О нас</Link></NavLink>
                         </Nav>
                     </Navbar.Collapse>
+
                 </Container>
             </Navbar>
         </>
     )
 }
-
-const handleClick = () => {
-    console.log('Click')
-};
