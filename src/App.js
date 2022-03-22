@@ -1,5 +1,6 @@
 import React from "react";
 import './App.css';
+import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NaviBar from './components/Navibar';
 import Footer from "./components/Footer";
@@ -11,9 +12,8 @@ import {
 } from "react-router-dom";
 
 import { Home } from './Page/Home'
-import { Users } from './Page/Users'
+import { Profile } from './Page/Profile'
 import { About } from './Page/About'
-//https://telegra.ph/file/dad2a885846c4aa40318e.png
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route index element={<Home />} />
-        <Route path='/users' element={<Users />} />
-        <Route index element={<Users />} />
+        <Route path='/users' element={<Profile />} />
+        <Route index element={<Profile />} />
         <Route path='/about' element={<About />} />
         <Route index element={<About />} />
       </Routes>

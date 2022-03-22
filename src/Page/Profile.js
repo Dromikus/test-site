@@ -1,8 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-export const About = () => (
+export const Profile = () => (
     <Container className="pt-5">
-        <h1>About</h1>
     </Container>
 )

@@ -1,8 +1,138 @@
-.myNavBar {
-    background-color: transparent;
+@font-face {
+    font-family: "ubuntu_m";
+    src: url("../fonts/ubuntu_m.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
+    font-family: "ubuntu_r";
+    src: url("../fonts/ubuntu_r.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
+    font-family: "ubuntu_b";
+    src: url("../fonts/ubuntu_b.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+.myLink {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 400;
 }
 
-#myLink {
-    text-decoration: none;
+.myNavbar {
+    height: 45px;
+    background-color: white;
+}
+
+/* Article cell */
+
+.item {
+    height: 400px;
+    border-radius: 15px;
+    transform: scale(1);
+    transition: 0.2s;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+}
+
+.item:hover {
+    transform: scale(1.03);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+  
+.itemImage {
+    height: 140px;
+    width: auto;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.iconLayout {
+    margin: 0;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.itemIcon {
+    height: 50px;
+    width: 50px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+} 
+
+.whiteRound {
+    background-color: rgb(255, 255, 255);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin: 0;
+    width: 110px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.coloredRound {
+    /* background-color: #1D4024; */
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    width: 100px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.infoLayout {
+    margin-top: 10%;
+    position: relative;
+}
+
+.itemTitle {
+    text-align: center;
+    font-family: "ubuntu_m";
+    position: relative;
+    font-size: 22px;
+}
+
+.itemText {
+    text-align: center;
+    font-family: "ubuntu_r";
+    position: relative;
+    font-size: 17px;
+}
+
+.itemButton {
+    position: relative;
+    display: block;
+    font-family: "ubuntu_b";
     font-size: 20px;
+    text-align: center;
+    position: relative;
+}
+
+@media screen and (max-width: 991px) {
+    .myNavbar {
+        height: auto;
+    }
 }

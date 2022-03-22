@@ -1,6 +1,111 @@
+@font-face {
+  font-family: "ubuntu";
+  src: url("../fonts/ubuntu_m.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+} 
 
 .slider-wrapper {
     position: relative;
     height: 100vh;
     overflow: hidden;
+}
+
+.titleLayout {
+  position: absolute;
+  bottom: 75%;
+  left: 10%;
+  color: #000000;
+  width: auto;
+}
+  
+.titleLayout span {
+  font-size: 65px;
+  font-family: "ubuntu";
+}
+
+@media screen and (max-width: 411px) {
+  .titleLayout {
+    position: absolute;
+    bottom: 55%;
+    left: 10%;
+    color: #000000;
+    width: 400;
   }
+
+  .titleLayout span {
+    font-size: auto;
+  }
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 50px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #494949;
+}
+
+.lastItem {
+  background-color: transparent;
+  border-color: transparent;
+  height: 400px;
+}
+
+.lastItemContainer {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  margin-top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.lastItemTitle {
+  position: relative;
+  font-family: "ubuntu_b";
+  font-size: 40px;
+  text-align: center;
+}
+
+.lastItemInfo {
+  position: relative;
+  display: block;
+  font-family: "ubuntu_b";
+  font-size: 20px;
+  margin-top: 16%;
+  text-align: center;
+}
+
+.lastItemButtonText {
+  font-family: "ubuntu_b";
+  font-size: 20px;
+}
+
+.lastItemButton {
+  background-color: white;
+  border-radius: 40px;
+  width: auto;
+  margin: 0;
+  padding: 3% 6% 3% 6%;
+  position: relative;
+  left: 32%;
+  margin-right: -50%;
+  margin-top: 7%;
+  
+  transform: scale(1);
+  transition: 0.2s;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.lastItemButton:hover {
+  transform: scale(1.03);
+  transition: 0.2s;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+}

@@ -1,19 +1,29 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Image } from "react-bootstrap";
+import '../style/ComponentStyle.css';
 
-export default function ArticleCell() {
+export default function ArticleCell({ item }) {
     return (
         <>
-            <Card className="my-2" bg='dark' text='light'>
-                <Card.Img variant="top" src='https://telegra.ph/file/e57118283e829a98c95bd.png' />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                    </Card.Text>
-                    <Button variant="primary" >Go somewhere</Button>
-                </Card.Body>
+            <Card className="my-2 item" bg='light' text='dark'>
+                <Card.Img className="itemImage" variant="top" src={item.backgroundImg} />
+                <div className="iconLayout">
+                    <div className="whiteRound">
+                        <div className="coloredRound" style={{ backgroundColor: item.iconBgcolor }}>
+                            <Image className="itemIcon" src={item.icon}></Image>
+                        </div>
+                    </div>
+                </div>
+                <div className="infoLayout">
+                    <Card.Body>
+                        <Card.Title className="itemTitle" style={{ color: item.titleColor }}>{item.title}</Card.Title>
+                        <Card.Text className="itemText">
+                            {item.subtitle}
+                        </Card.Text>
+                        <span className="itemButton" >Узнать больше</span>
+                    </Card.Body>
+                </div>
+
             </Card>
         </>
     )
